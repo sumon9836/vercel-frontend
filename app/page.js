@@ -7,7 +7,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://mainline.proxy.rlwy.net:35640"
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
 
   const fetchSessions = async () => {
     try {

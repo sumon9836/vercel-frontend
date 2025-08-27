@@ -8,7 +8,7 @@ export default function LogoutPage() {
   const [loading, setLoading] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://mainline.proxy.rlwy.net:35640"
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
 
   const handleLogout = async () => {
     setLoading(true)
