@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #ffc2e1;
+  --pink-strong: #ff7aa2;
+  --blue: #c2e9fb;
+  --blue-strong: #6aa9ff;
+  --yellow: #fff6a5;
+  --yellow-strong: #ffd166;
+  --red: #ffb3ba;
+  --bg1: #ff9a9e;
+  --bg2: #fecfef;
+  --bg3: #a1c4fd;
+  --bg4: #c2ffd8;
+  --bg5: #f6d365;
+  --bg6: #fda085;
+  --glass: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --text: #1a1a1a;
+  --text-soft: #333;
+  --primary: var(--pink-strong);
+  --secondary: var(--blue-strong);
+  --muted: var(--text-soft);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg1), var(--bg3), var(--bg4), var(--bg6));
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
